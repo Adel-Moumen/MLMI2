@@ -47,8 +47,8 @@ args.vocab = vocab
 
 model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
 
-if torch.__version__ == "2.1.0":
-    model = torch.compile(model)
+# if torch.__version__ == "2.1.0":
+#     model = torch.compile(model)
 
 num_params = sum(p.numel() for p in model.parameters())
 print('Total number of model parameters is {}'.format(num_params))
