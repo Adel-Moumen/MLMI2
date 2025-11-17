@@ -36,4 +36,4 @@ for split in splits:
         }
         
     with open(f"json/{split}_fbank.json", "w") as f:
-        json.dump(data_to_save, f)
+        json.dump(data_to_save, f, indent=4)
